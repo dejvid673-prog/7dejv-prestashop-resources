@@ -11,9 +11,10 @@ Use this skill when you need to understand where a PrestaShop feature lives, wha
 
 ## Version Gate
 
-- Determine the exact target version from the inspected project. Default to PrestaShop 9.1.x only when the project does not prove another version.
+- Determine the exact target version from the repository, project metadata, or explicit task context. PrestaShop 9.1.x is the target only when the project or an explicit requirement establishes it.
+- If the exact target version cannot be determined, do not guess. Stop version-dependent analysis and mark it `NOT VERIFIED`.
 - The full core `.ai/` hierarchy starts with PrestaShop 9.2 and is absent from the `9.1.x` branch. For a 9.1.x target, use `develop/.ai` only as supplementary architectural guidance and verify every conclusion against 9.1.x code and PrestaShop 9 DevDocs.
-- Do not project a 9.2-only path, service, or convention onto 9.1.x. If the target source cannot be inspected, stop and report `NOT VERIFIED`.
+- Do not project a 9.2-only path, service, or convention onto 9.1.x. If the target source cannot be inspected, stop version-dependent analysis and report `NOT VERIFIED`.
 
 ## Prerequisites
 
@@ -58,7 +59,7 @@ PRESTASHOP INTERNALS MAP
 - Call out `ShopConstraint`, permission scope, `AdminSecurity`, CSRF, translation scope, and multistore scope whenever they affect the answer.
 - Distinguish `src/Core/Domain` declarations from concrete implementations in `src/Adapter`, and identify whether persistence uses Doctrine, a repository wrapping `ObjectModel`, or an unavoidable legacy path.
 - Do not recommend direct SQL when an appropriate domain command, query, repository, or public API exists. Any unavoidable SQL must be parameterized and correctly scoped.
-- If the target version or the relevant file path is unknown, stop and mark the missing data as `NOT VERIFIED`.
+- If the target version is unknown, stop version-dependent analysis and mark it `NOT VERIFIED`. If a relevant file path cannot be verified, mark that path and conclusions depending on it `NOT VERIFIED`.
 
 ## Reading Order
 

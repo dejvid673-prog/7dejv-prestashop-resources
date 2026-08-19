@@ -20,17 +20,19 @@ Use this skill for product QA on a local or staging PrestaShop shop when you nee
 
 ## Workflow
 
-1. Open the product by ID, SKU, or URL.
-2. Confirm the page loads and record HTTP errors, redirects, browser errors, and visible UI failures.
-3. Inspect the visible product data.
-4. Check desktop rendering, HTML integrity, broken links, unsafe output or XSS symptoms, missing media, and layout integrity.
-5. Verify SEO-related output when visible.
-6. Verify variation behavior when combinations exist.
-7. Verify price and VAT presentation when visible.
-8. Check a mobile or narrow viewport when browser tooling supports it.
-9. Optionally perform a safe add-to-cart test on local or staging.
-10. Collect screenshots or other artifacts if the browser supports them.
-11. Report the findings against explicit PASS/FAIL criteria.
+1. If a product URL is provided, open that URL.
+2. If an ID, SKU, or reference is provided, locate the corresponding product through an available storefront search or a verified mapping, then open its product URL.
+3. If the product cannot be identified unambiguously, stop and report `NOT VERIFIED`.
+4. Confirm the page loads and record HTTP errors, redirects, browser errors, and visible UI failures.
+5. Inspect the visible product data.
+6. Check desktop rendering, HTML integrity, broken links, unsafe output or XSS symptoms, missing media, and layout integrity.
+7. Inspect `meta_title` and `meta_description` in the document `<head>` or DOM when browser tooling provides access. If tooling exposes only the visible page, mark those fields `NOT VERIFIED`; never infer them from the H1 or page content.
+8. Verify variation behavior when combinations exist.
+9. Verify price and VAT presentation when visible.
+10. Check a mobile or narrow viewport when browser tooling supports it.
+11. Optionally perform a safe add-to-cart test on local or staging.
+12. Collect screenshots or other artifacts if the browser supports them.
+13. Report the findings against explicit PASS/FAIL criteria.
 
 ## What to Check
 
@@ -62,7 +64,8 @@ Separate problems into the correct bucket:
 
 ## Extra Checks
 
-- Confirm name, SKU or reference if visible, price, VAT when shown, `description`, `description_short`, images, breadcrumb, category, availability, units, weight or logistics data, H1, `meta_title`, `meta_description`, and URL / `link_rewrite`.
+- Confirm name, SKU or reference if visible, price, VAT when shown, `description`, `description_short`, images, breadcrumb, category, availability, units, weight or logistics data, H1, and URL / `link_rewrite`.
+- Verify `meta_title` and `meta_description` only from document metadata when tooling exposes it; otherwise report them as `NOT VERIFIED`.
 - If combinations exist, switch variants and verify price, SKU/reference, images, selected attributes, and availability changes.
 - Watch for XSS, broken HTML, broken links, missing media, or layout breakage.
 - Use mobile checks if the browser tooling supports them.

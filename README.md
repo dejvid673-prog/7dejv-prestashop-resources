@@ -9,11 +9,23 @@ To repozytorium porządkuje zweryfikowane materiały dotyczące PrestaShop, agen
 
 | Katalog | Zawartość | Status |
 | --- | --- | --- |
+| [`.ai/skills/`](.ai/skills/) | Lokalne skills 7DEJV dla architektury, developmentu i audytu PrestaShop | aktywne |
 | [`official/`](official/) | Zweryfikowane zasoby należące do organizacji PrestaShop lub PrestaShopCorp | katalog źródeł |
 | [`community/`](community/) | Materiały społecznościowe, wyraźnie oddzielone od oficjalnych | tylko referencje |
 | [`planned/`](planned/) | Propozycje własnych skills 7DEJV | niezaimplementowane |
 | [`sources/`](sources/) | Rejestr źródeł, licencji i przypiętych rewizji | źródło prawdy |
 | [`audit/`](audit/) | Raporty z przeglądów repozytorium i źródeł | audyt |
+
+## Lokalne skills 7DEJV
+
+| Skill | Rola |
+| --- | --- |
+| [`prestashop-internals-foundations`](.ai/skills/prestashop-internals-foundations/) | Mapowanie architektury, legacy i bezpiecznych punktów rozszerzeń PrestaShop. |
+| [`prestashop-solution-architect`](.ai/skills/prestashop-solution-architect/) | Wybór minimalnej architektury rozwiązania przed kodowaniem. |
+| [`prestashop-development-foundations`](.ai/skills/prestashop-development-foundations/) | Zasady bezpiecznej implementacji modułów, integracji, usług, CQRS i zmian produktowych. |
+| [`prestashop-product-browser-audit`](.ai/skills/prestashop-product-browser-audit/) | Audyt strony produktu z perspektywy klienta bez edycji danych i finalizacji zamówienia. |
+
+Każdy skill ma własny `SKILL.md` i został zweryfikowany lokalnym walidatorem skills.
 
 ## Najważniejsze ustalenia
 

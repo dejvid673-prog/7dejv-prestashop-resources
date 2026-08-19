@@ -3,6 +3,7 @@ name: prestashop-solution-architect
 description: Select a minimal PrestaShop solution before coding when several platform extension paths may fit.
 metadata:
   short-description: PrestaShop architecture decision skill
+  sku: 7DJ-SKL-PS-ARC-001
 ---
 
 # PrestaShop Solution Architect

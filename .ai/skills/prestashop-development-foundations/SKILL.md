@@ -3,6 +3,7 @@ name: prestashop-development-foundations
 description: Implement scoped PrestaShop modules, integrations, services, controllers, forms, CQRS, or product changes safely.
 metadata:
   short-description: PrestaShop implementation guardrails
+  sku: 7DJ-SKL-PS-DEV-001
 ---
 
 # PrestaShop Development Foundations

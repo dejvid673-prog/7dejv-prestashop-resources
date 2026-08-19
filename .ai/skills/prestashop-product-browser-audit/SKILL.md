@@ -3,6 +3,7 @@ name: prestashop-product-browser-audit
 description: Audit a PrestaShop product page as a shopper without editing product data or completing checkout.
 metadata:
   short-description: PrestaShop product page QA skill
+  sku: 7DJ-SKL-PS-QA-001
 ---
 
 # PrestaShop Product Browser Audit

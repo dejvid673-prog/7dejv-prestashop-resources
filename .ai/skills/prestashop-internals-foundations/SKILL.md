@@ -3,6 +3,7 @@ name: prestashop-internals-foundations
 description: Map PrestaShop internals and safe extension points before architecture, development, or core-behavior analysis.
 metadata:
   short-description: PrestaShop internals map and safe extension boundaries
+  sku: 7DJ-SKL-PS-INT-001
 ---
 
 # PrestaShop Internals Foundations

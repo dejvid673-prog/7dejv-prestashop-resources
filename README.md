@@ -18,14 +18,16 @@ To repozytorium porządkuje zweryfikowane materiały dotyczące PrestaShop, agen
 
 ## Lokalne skills 7DEJV
 
-| Skill | Rola |
-| --- | --- |
-| [`prestashop-internals-foundations`](.ai/skills/prestashop-internals-foundations/) | Mapowanie architektury, legacy i bezpiecznych punktów rozszerzeń PrestaShop. |
-| [`prestashop-solution-architect`](.ai/skills/prestashop-solution-architect/) | Wybór minimalnej architektury rozwiązania przed kodowaniem. |
-| [`prestashop-development-foundations`](.ai/skills/prestashop-development-foundations/) | Zasady bezpiecznej implementacji modułów, integracji, usług, CQRS i zmian produktowych. |
-| [`prestashop-product-browser-audit`](.ai/skills/prestashop-product-browser-audit/) | Audyt strony produktu z perspektywy klienta bez edycji danych i finalizacji zamówienia. |
+| SKU | Skill | Rola | Kiedy używać |
+| --- | --- | --- | --- |
+| `7DJ-SKL-PS-INT-001` | [`prestashop-internals-foundations`](.ai/skills/prestashop-internals-foundations/) | Mapowanie architektury, legacy i bezpiecznych punktów rozszerzeń PrestaShop. | Przed projektowaniem rozwiązania lub zmianą zachowania PrestaShop, gdy trzeba ustalić właściciela logiki i bezpieczny punkt rozszerzenia. |
+| `7DJ-SKL-PS-ARC-001` | [`prestashop-solution-architect`](.ai/skills/prestashop-solution-architect/) | Wybór minimalnej architektury rozwiązania przed kodowaniem. | Gdy istnieje kilka możliwych rozwiązań i trzeba wybrać między funkcją core, konfiguracją, modułem, integracją lub aplikacją zewnętrzną. |
+| `7DJ-SKL-PS-DEV-001` | [`prestashop-development-foundations`](.ai/skills/prestashop-development-foundations/) | Zasady bezpiecznej implementacji modułów, integracji, usług, CQRS i zmian produktowych. | Po zatwierdzeniu architektury, podczas implementacji i walidacji zmian w repozytorium. |
+| `7DJ-SKL-PS-QA-001` | [`prestashop-product-browser-audit`](.ai/skills/prestashop-product-browser-audit/) | Audyt strony produktu z perspektywy klienta bez edycji danych i finalizacji zamówienia. | Po wdrożeniu zmiany na środowisku lokalnym lub stagingowym, aby sprawdzić efekt widoczny dla klienta. |
 
 Każdy skill ma własny `SKILL.md` i został zweryfikowany lokalnym walidatorem skills.
+
+Zalecana kolejność pracy: internals → architecture → development → browser audit.
 
 ## Najważniejsze ustalenia
 

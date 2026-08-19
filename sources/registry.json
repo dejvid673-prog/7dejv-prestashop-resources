@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "prestashop-skills",
+      "classification": "official",
+      "kind": "github-repository",
+      "repository": "PrestaShop/skills",
+      "url": "https://github.com/PrestaShop/skills",
+      "ref": "0bbf2e0db4379118e968ca87707500cf688c22c1",
+      "expectedSpdx": "NONE",
+      "vendored": false
+    },
+    {
+      "id": "prestashop-mcp-server-stubs",
+      "classification": "official",
+      "kind": "github-repository",
+      "repository": "PrestaShopCorp/ps-mcp-server-stubs",
+      "url": "https://github.com/PrestaShopCorp/ps-mcp-server-stubs",
+      "ref": "7d3716324415b148c1c13ab818d1f9b3f3e13458",
+      "expectedSpdx": "NOASSERTION",
+      "vendored": false
+    },
+    {
+      "id": "prestashop-core-ai-context",
+      "classification": "official",
+      "kind": "github-repository",
+      "repository": "PrestaShop/PrestaShop",
+      "url": "https://github.com/PrestaShop/PrestaShop",
+      "ref": "d53bb168759633cd073231ea576b650bb38a0878",
+      "expectedSpdx": "NOASSERTION",
+      "declaredLicense": "OSL-3.0 in LICENSE.md",
+      "vendored": false
+    },
+    {
+      "id": "prestashop-mcp-docs",
+      "classification": "official",
+      "kind": "web-document",
+      "url": "https://docs.mcp.prestashop.com/en/1-mcp-overview/",
+      "retrievedAt": "2026-08-19"
+    },
+    {
+      "id": "prestashop-9-2-beta-1",
+      "classification": "official",
+      "kind": "web-document",
+      "url": "https://build.prestashop-project.org/news/2026/prestashop-9-2-beta1/",
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "id": "jeffsenso-prestashop-skills",
+      "classification": "community",
+      "kind": "github-repository",
+      "repository": "jeffsenso/prestashop-skills",
+      "url": "https://github.com/jeffsenso/prestashop-skills",
+      "ref": "46ee803bbe09bcd054d8de7077a275465f378da9",
+      "expectedSpdx": "MIT",
+      "vendored": false
+    }
+  ]
+}

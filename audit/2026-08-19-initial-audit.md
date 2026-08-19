@@ -12,7 +12,7 @@ Audyt jest statyczny i dokumentacyjny. Nie instalowano skills, modułów, zależ
 
 ### Wysokie
 
-1. **Nazwa repozytorium może sugerować afiliację.** Repo jest własnością `dejvid673-prog`, a nie organizacji PrestaShop. README zawiera teraz jednoznaczne zastrzeżenie. Zalecana jest późniejsza decyzja właściciela o zmianie nazwy na nazwę opisującą katalog zasobów.
+1. **Nazwa repozytorium może sugerować afiliację.** Naprawione 2026-08-19: repo zostało przemianowane na `7dejv-prestashop-resources`. README nadal jednoznacznie wskazuje, że repo jest własnością `dejvid673-prog`, a nie organizacji PrestaShop.
 2. **Brak jawnej licencji w `PrestaShop/skills`.** Publiczna dostępność nie oznacza zgody na redystrybucję. Treści skills nie skopiowano.
 3. **Stubs MCP są własnościowe i nie są serwerem.** Nie wolno ich przedstawiać jako pełnej implementacji ani kopiować jako kodu źródłowego serwera.
 4. **Update i restore są operacjami wysokiego ryzyka.** Oficjalne skills zawierają bramki, ale lokalna polityka musi dodatkowo wymagać weryfikacji backupu, dokładnego celu, okna serwisowego i ponownej zgody przed zapisem.
@@ -26,7 +26,7 @@ Audyt jest statyczny i dokumentacyjny. Nie instalowano skills, modułów, zależ
 
 ### Niskie
 
-1. Repo nie ma automatycznego sprawdzania linków i świeżości commitów.
+1. Brak automatycznej walidacji źródeł. Naprawione 2026-08-19 przez `scripts/Test-SourceRegistry.ps1` i GitHub Actions.
 2. Repo nie ma jeszcze szablonu decyzji o promocji społecznościowego materiału do lokalnego, utrzymywanego skilla.
 
 ## Kontrole bezpieczeństwa
@@ -48,13 +48,15 @@ Audyt jest statyczny i dokumentacyjny. Nie instalowano skills, modułów, zależ
 - [x] Zarejestrowano oficjalne i społecznościowe źródła bez mieszania statusu.
 - [x] Zapisano przypięte rewizje i ograniczenia licencyjne.
 - [x] Wykonano statyczny audyt bezpieczeństwa materiałów.
+- [x] Zmieniono nazwę repozytorium na niezawierającą sugestii afiliacji.
+- [x] Wysłano pytanie o licencję do oficjalnego kanału [PrestaShop Discussion #42381](https://github.com/PrestaShop/PrestaShop/discussions/42381).
+- [x] Dodano walidator struktury, linków, rewizji i licencji oraz workflow GitHub Actions.
 - [ ] Nie skopiowano pełnej treści oficjalnych skills, ponieważ upstream nie deklaruje licencji.
 - [ ] Nie uruchomiono pilota MCP ani skills, ponieważ brak osobnej instancji PrestaShop w zakresie tego etapu.
 
 ## Rekomendowana kolejność dalszych działań
 
-1. Wybrać nową, niebudzącą wątpliwości nazwę repozytorium albo pozostawić obecne ostrzeżenie.
-2. Zapytać PrestaShop o licencję repozytorium `PrestaShop/skills` lub poczekać na dodanie pliku `LICENSE`.
-3. Zbudować walidator linków, rewizji i struktury rejestru źródeł.
-4. Przygotować osobny projekt pilotażowy na świeżej instancji PrestaShop 9.2 dopiero po stabilnym wydaniu albo świadomie na becie, bez danych produkcyjnych.
-5. Zacząć własne skills od operacji tylko do odczytu: audyt sklepu, produkty o niskim stanie i raport zamówień. Dopiero po testach dodać kontrolowane zapisy.
+1. Poczekać na odpowiedź w [PrestaShop Discussion #42381](https://github.com/PrestaShop/PrestaShop/discussions/42381) przed kopiowaniem treści z `PrestaShop/skills`.
+2. Utrzymywać przypięte rewizje przez uruchomienie walidatora przy każdej aktualizacji rejestru.
+3. Przygotować osobny projekt pilotażowy na świeżej instancji PrestaShop 9.2 dopiero po stabilnym wydaniu albo świadomie na becie, bez danych produkcyjnych.
+4. Zacząć własne skills od operacji tylko do odczytu: audyt sklepu, produkty o niskim stanie i raport zamówień. Dopiero po testach dodać kontrolowane zapisy.

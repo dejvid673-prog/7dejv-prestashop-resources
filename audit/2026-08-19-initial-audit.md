@@ -34,7 +34,7 @@ Audyt jest statyczny i dokumentacyjny. Nie instalowano skills, modułów, zależ
 | Kontrola | Wynik | Uwagi |
 | --- | --- | --- |
 | Sekrety i dane klientów | PASS | repo zawiera wyłącznie publiczne metadane i dokumentację |
-| Kod wykonywalny | PASS | nie dodano kodu ani automatycznych instalatorów |
+| Kod wykonywalny | PASS z ograniczeniem | dodano wyłącznie walidator PowerShell uruchamiany w CI; nie instaluje zależności ani nie wykonuje operacji na sklepie |
 | Oddzielenie official/community/planned | PASS | osobne katalogi i jawne etykiety |
 | Pochodzenie | PASS | zapisano URL i commit SHA dla repozytoriów |
 | Licencje upstream | PASS z ograniczeniem | brak licencji i proprietary blokują kopiowanie |
@@ -51,8 +51,8 @@ Audyt jest statyczny i dokumentacyjny. Nie instalowano skills, modułów, zależ
 - [x] Zmieniono nazwę repozytorium na niezawierającą sugestii afiliacji.
 - [x] Wysłano pytanie o licencję do oficjalnego kanału [PrestaShop Discussion #42381](https://github.com/PrestaShop/PrestaShop/discussions/42381).
 - [x] Dodano walidator struktury, linków, rewizji i licencji oraz workflow GitHub Actions.
-- [ ] Nie skopiowano pełnej treści oficjalnych skills, ponieważ upstream nie deklaruje licencji.
-- [ ] Nie uruchomiono pilota MCP ani skills, ponieważ brak osobnej instancji PrestaShop w zakresie tego etapu.
+- [x] Zachowano ograniczenie licencyjne: nie skopiowano pełnej treści oficjalnych skills, ponieważ upstream nie deklaruje licencji.
+- [x] Zachowano zakres audytu: nie uruchomiono pilota MCP ani skills bez osobnej instancji PrestaShop.
 
 ## Rekomendowana kolejność dalszych działań
 
